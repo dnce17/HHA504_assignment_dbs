@@ -22,7 +22,7 @@
 ![Database creation](img/azure/create_db.png) 
 
 ### GCP MySQL
-1. Click the top left burger icon and click "SQL"
+1. Click the top left burger icon and click "SQL"  
 ![Where "SQL" link is](img/gcp/sql_link.png)
 2. Create an instance and "Choose MySQL"
 ![Create an instance button](img/gcp/create_instance.png)
@@ -57,7 +57,7 @@
 ![GCP MySQL connection details](img/gcp/connection_details.png)
 
 ## Explore BigQuery (GCP)
-1. Click "Big Query" in the top left burger icon
+1. Click "Big Query" in the top left burger icon  
 ![BigQuery link](img/gcp/bigquery/bigquery_link.png)
 
 ### Load a small sample dataset into table
@@ -77,8 +77,8 @@
 4. Create a simple query to get desired info from your data
     * This repo used a dataset pertaining to various cereal brands' nutrition
         * [Cereal Nutrition Dataset Link](https://www.kaggle.com/datasets/crawford/80-cereals)
-        * Query and results
-![](img/gcp/bigquery/query_n_results.png)   
+        * Query and results  
+![Query and results](img/gcp/bigquery/query_n_results.png)   
 
 ## Monitor Database Services
 ### Cost
