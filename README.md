@@ -1,7 +1,7 @@
 # Working with Managed Databases in Azure and GCP
 
 ## Start and Configure a Managed Database
-### Azure MySQL (NOTE: successful creation at ~7:10 - NOT STOPPED YET)
+### Azure MySQL
 1. Click "Azure Database for MySQL flexible servers"
 ![Link to create MySQL server](img/azure/mysql_creation_link.png)
 2. Click "Create," then "Quick Create" a flexible server
@@ -21,8 +21,7 @@
 6. Click "Add," add a name for the new database, and then save it to complete the database creation 
 ![Database creation](img/azure/create_db.png) 
 
-
-### GCP MySQL (NOTE: created at 4:37 PM, finished creating at 4:57; stopped at 10:31 PM):
+### GCP MySQL
 1. Click the top left burger icon and click "SQL"
 ![Where "SQL" link is](img/gcp/sql_link.png)
 2. Create an instance and "Choose MySQL"
@@ -79,7 +78,24 @@
 ## Monitor Database Services
 ### Cost
 #### Azure
+1. Click the top left burger icon and click ""Cost Management + Billing"" in the left panel that opens
+2. The default "Overview" page shows a dashboard of costs in chart and numbers
+    * Based on the pie chart, $0.34 was the incurred cost for running the MySQL flexible server 
+![](img/azure/monitoring/cost_dashboard.png)
+
 #### GCP
+1. Click the top left burger icon and click "Billing" in the left panel that opens
+2. In the "Overview" pages that appears, the cost and credits used will show
+3. Hover and click on the "Cost" header area to view the details
+    * The cloud SQL instance that was ran for this repo incurred ~$0.11
+        * NOTE: After running the instance yesterday on 10/18/2024, the cost was $0.06 in the morning of the following day and increased to $0.11 later that afternoon. Thus, this may not reflect the final cost, as GCP billing updates could take more time.
+!["Overview" page](img/gcp/monitoring/cost_overview.png)
+!["Report" page](img/gcp/monitoring/cost_report.png)
+4. The cost of BigQuery itself can be viewed by...
+    1. Clicking "Reports"
+    2. Click the "Services" box
+    3. Check "BigQuery"
+![BigQuery cost](img/gcp/bigquery/bigquery_cost_nav.png)
 
 ### Performance
 #### Azure
@@ -90,7 +106,6 @@
         * The dropdown list under the "Metrics" header allows switching between metrics
         * "Add metric" allows you to view more than one metric simultaneously in the same chart
 ![Azure metrics chart](img/azure/monitoring/metrics.png)
-
 
 #### GCP
 * Cloud SQL instance
@@ -106,7 +121,20 @@
 ![Info on query insights](img/gcp/monitoring/query_insights.png)
 
 * BigQuery
-    1. Placeholder --> still hasn't loaded, but results section has other tabs that show bytes consumed and all that
+1. Click "Monitoring" in the sub-panel of "BigQuery" of the left panel
+![BigQuery's monitoring link](img/gcp/bigquery/monitoring_link.png)
+2. Usage related to operational health and resource utilization can be viewed here
+![Usage information section](img/gcp/bigquery/monitoring_pg.png)
+
+### Issues with Monitoring BigQuery Cost and Usage
+* BigQuery's cost and usage information has not updated and remains empty in the "Monitoring" section
+    * For cost, --> 1 TB
+    * Troubleshooting Attempts for Usage Information
+        * I turned "Live data" on. Then, I ran several queries and refreshed the page after 5 minutes; I repeated this thrice. However, there was no change.
+        * I waited the next day, but usage information remains unchanged
+
+## Reflections on the differences between managing databases on Azure and GCP.
+
 
 
 ![]()
