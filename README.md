@@ -33,7 +33,7 @@
     * Instance Info
         * Edition preset: Sandbox
         * Create an instance ID and password
-![Instance info config](img/gcp/create_instance.png)
+![Instance info config](img/gcp/instance_info.png)
     * Choose region and zonal availability
         * Zonal Availability: Single zone
 ![Region and zonal config](img/gcp/region_zone.png)
@@ -49,6 +49,12 @@
         * Query insights
             * Enable Query insights
 ![Query Insight](img/gcp/query_insight.png)
+
+### Connections Details
+#### Azure
+![Azure MySQL connection details](img/azure/connection_details.png)
+#### GCP
+![GCP MySQL connection details](img/gcp/connection_details.png)
 
 ## Explore BigQuery (GCP)
 1. Click "Big Query" in the top left burger icon
@@ -128,15 +134,10 @@
 
 ### Issues with Monitoring BigQuery Cost and Usage
 * BigQuery's cost and usage information has not updated and remains empty in the "Monitoring" section
-    * For cost, --> 1 TB
+    * For cost, this website for [BigQuery](https://cloud.google.com/bigquery/pricing) mentions that the "first 1 TiB of query data processed per month is free." The queries I ran totaled less than 1 TiB, so this may be why BigQuery's cost did not change. 
     * Troubleshooting Attempts for Usage Information
         * I turned "Live data" on. Then, I ran several queries and refreshed the page after 5 minutes; I repeated this thrice. However, there was no change.
         * I waited the next day, but usage information remains unchanged
 
-## Reflections on the differences between managing databases on Azure and GCP.
-
-
-
-![]()
-![](img/gcp)
-![](img/azure)
+## Reflections on Differences in Managing Databases on Azure vs GCP
+Making a MySQL database in Azure requires creating a server for it first unlike GCP where the MySQL instance can be made directly. Creating a database after the server is made in Azure is also more simple in that there is no configurations to adjust; instead, only a name is needed. In contrast, there is more configuration options when creating a database in GCP. GCP seems to allow users to view multiple metrics in a single chart while Azure does not have that option. Azure has a dashboard with various charts that showcases different cost, but they do not have dashboards for performance metrics. GCP is the opposite in that they have a dashboard view of performance metrics, but not for cost.
