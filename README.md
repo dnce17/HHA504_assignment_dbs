@@ -92,8 +92,7 @@
 1. Click the top left burger icon and click "Billing" in the left panel that opens
 2. In the "Overview" page that appears, the cost and credits used will show
 3. Hover and click on the "Cost" header area to view the details
-    * The cloud SQL instance that was ran for this repo incurred ~$0.11
-        * NOTE: After running the instance yesterday on 10/18/2024, the cost was $0.06 in the morning of the following day and increased to $0.11 later that afternoon. Thus, this may not reflect the final cost, as GCP billing updates could take more time.
+    * The cloud SQL instance that was ran for this repo incurred $0.29
 !["Overview" page](img/gcp/monitoring/cost_overview.png)
 !["Report" page](img/gcp/monitoring/cost_report.png)
 4. The cost of BigQuery itself can be viewed by...
